@@ -1,20 +1,23 @@
 function addToZero (numArr) {
     if (numArr.length >= 2){
-        for (i = 0; i < numArr.length; i++){
-            for (j = i + 1; j < numArr.length; j++){
-                if (numArr[i] + numArr[j] == 0){                    
+        for (i = 0; i < numArr.length; i++) {
+            for (j = i + 1; j < numArr.length; j++) {
+                if (numArr[i] + numArr[j] === 0) {
                     return true
-                }  
-            }   
-        }
-    } else {
+                }
+            }
+        } return false
+    } else if (numArr.length > 2 && numArr[1] === 0) {
+        return true
+    }
+    else {
         return false
     } 
 }
-// console.log(addToZero([]))
-// console.log(addToZero([1]))
-// console.log(addToZero([1, 2, 3]))
-// console.log(addToZero([1, 2, 3, -2]))
+console.log(addToZero([]))
+console.log(addToZero([1]))
+console.log(addToZero([1, 2, 3]))
+console.log(addToZero([1, 2, 3, -2]))
 
 
 function hasUniqueChar (str) {
