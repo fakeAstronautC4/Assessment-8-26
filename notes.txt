@@ -1,0 +1,14 @@
+Immediately one can conclude that for both insert and append time scale is not linear given 
+the difference of time between the smallest two array and the biggest two array, despite both 
+examples having a 1 to 10 difference.
+I believe that the append function scales better, because even though it is slower on smaller 
+amounts, it increases slower as well, therefore being increasingly more efficient than the insert 
+function. 
+
+      ________________________________________________________________________
+      |  extraLargeArray | LargeArray | mediumArray | smallArray | tinyArray |
+      |==================|============|=============|============|===========|
+insert|    623.4373 ms   |  6.7978 ms |   143.0 μs  |  40.5 μs   |  32.9 μs  |
+      |==================|============|=============|============|===========|
+append|      2.6054 ms   |  378.6 μs  |   101.5 μs  |  73.9 μs   |  73.5 μs  |
+      |==================|============|=============|============|===========|
